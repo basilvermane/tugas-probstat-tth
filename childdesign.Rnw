@@ -1,0 +1,26 @@
+\chapter{Desain Penelitian dan Hipotesa}
+
+\section{Tipe data}  
+Pada penelitian ini, digunakan dua tipe data yaitu numerik dan kategorikal. IPK dan jumlah jam yang dihabiskan per hari di kampus merupakan data dengan tipe numerik, sedangkan jenis kelamin dan jurusan merupakan data kategorikal.
+
+\section{Metode Pengumpulan Data/ Metode Sampling}
+
+\subsection{Kuesioner}
+Kuesioner merupakan teknik pengumpulan data dimana responden diberikan pertanyaan mengenai hal-hal yang dapat menjadi faktor-faktor yang dapat mempengaruhi IPK mahasiswa dan responden mengisi sendiri jawaban dari pertanyaan yang diberikan.
+
+\subsection{Populasi}
+Sulistyo-Basuki (2006 :182) mengemukakan bahwa populasi adalah keseluruhan objek yang akan diteliti. Populasi dalam penelitian ini adalah mahasiswa Universitas Multimedia Nusantara.
+
+\subsection{Sampel}
+Sampel adalah bagian dari sebuah populasi yang dianggap dapat mewakili populasi tersebut. Menurut Arikunto (2002: 112), untuk menentukan besarnya sampel, apabila subjeknya lebih besar dari 100 dapat diambil antara 10-15 \% atau 20-25 \%. Dalam penelitian ini kami mengambil 20-25\%  karena berdasarkan kuesioner yang telah disebar kami mendapatkan 140 responden.
+
+\section{Hipotesa}  
+
+\noindent $H_0:$ $\mu$ IPK_{TI} = $\mu$ IPK_{SI} = $\mu$ IPK_{SK} = $\mu$ IPK_{Manajemen} = $\mu$ IPK_{Akuntansi} = $\mu$ IPK_{Ilkom} = $\mu$ IPK_{DKV}\\
+$H_1:$ Salah satu dari $\mu$ jurusan di atas tidak sama dengan $\mu$ jurusan lainnya.\\
+
+\noindent $H_0:$ Nilai IPK mahasiswa laki-laki tidak sama dengan nilai IPK mahasiswa perempuan.\\   
+$H_1:$ Nilai IPK mahasiswa laki-laki sama dengan nilai IPK mahasiswa perempuan.\\
+
+\noindent $H_0:$ Tidak terdapat hubungan antara nilai IPK mahasiswa dengan jumlah waktu yang dihabiskan di kampus.\\   
+$H_1:$ Terdapat hubungan antara nilai IPK mahasiswa dengan jumlah waktu yang dihabiskan di kampus.\\

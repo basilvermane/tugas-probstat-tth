@@ -1,0 +1,83 @@
+%mainfile.Rnw
+
+\documentclass[12pt]{report}%{article}
+
+\usepackage{alltt}%for peculiar old knitr version which doesn't generate it in .tex
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref} %for url
+\usepackage{verbatim}
+\usepackage{enumerate,enumitem}
+\usepackage{chicago} % for bibliography style chicago
+
+
+%************************
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+
+\title{Faktor- Faktor yang Memengaruhi IPK Mahasiswa UMN}
+\author{
+  Edwin Handoko (14110110007)
+  \and
+  Adrian Hartanto Tedja (14110110033)
+  \and
+  Sintya Oktaviani (14110110021)
+  \and
+  Naldiyanto Sofian (14110110023)
+  \and
+  Annastasya Indarsin (14110110024)
+  \and
+  Josua Kevin Wira (14110110025)
+  \and
+  Cynthia Sinly (14110110053)
+  \and
+  Hansen Edrick Harianto (14110110056)
+  \and
+  Cindy Astrina (14110110061)
+  \and
+  Simbar Mardani (14110110096)
+}
+\date{\today}
+\maketitle
+
+\tableofcontents
+\newpage
+
+
+%************************
+<<child='childintro.Rnw',eval=TRUE>>=
+@
+%************************
+
+%************************
+<<child='childdesign.Rnw',eval=TRUE>>=
+@
+%************************
+
+%************************
+<<child='childanalysis.Rnw',eval=TRUE>>=
+@
+%************************
+
+%************************
+<<child='childconclusion.Rnw',eval=TRUE>>=
+@
+%************************
+
+\nocite{hayter4}
+\nocite{rmanual}
+\nocite{R-knitr}
+\nocite{R-xlsx}
+\bibliographystyle{chicago}
+\bibliography{bibtest}
+
+\appendix
+%************************
+<<child='childappendix.Rnw',eval=TRUE>>=
+@
+%************************
+
+
+\end{document}
+

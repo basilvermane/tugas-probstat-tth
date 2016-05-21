@@ -1,0 +1,24 @@
+\chapter{Data}
+%--Tabel Full--
+<<fulltable, echo=FALSE,warning=FALSE,message=FALSE>>=
+tabelipk
+@
+
+\chapter{Stuffs}
+
+Yang perlu dilampirkan:   
+\begin{itemize}
+\item Kuesioner   
+\item Data mentah disimpan dalam bentuk tabel dan disimpan sebagi file dengan format csv atau xlsx. Pastikan file anda dapat langsung dibaca oleh SAS dan R. Hindari penggabungan sel dan penggunaan format dll yang dapat mengganggu pembacaan data oleh script/ software. Hindari melompati satu baris dalam menuliskan data mentah. Tuliskan nama variabel tanpa spasi, misalnya \emph{PilihanRasaMieInstan}.  Gunakan titik sebagai koma desimal dalam data mentah yang dilampirkan.   
+\item Source code yang anda gunakan untuk menghasilkan grafik dan output statistika.   
+\end{itemize}
+
+\noindent Anda dapat menggunakan template ini untuk laporan tugas kelompok dalam bentuk \LaTeX.
+
+\chapter{Output R}
+
+\chapter{Perintah R}
+
+\begin{verbatim}
+boxplot(ch$consumption~ch$housing,horizontal=TRUE,main="Konsumsi Mie Instan ...")
+\end{verbatim}

@@ -1,0 +1,123 @@
+\chapter{Analisa Data}   
+\section{Dasar Teori}
+
+\subsection{T-Test}
+T-Test adalah uji komparatif untuk mengetahui apakah ada perbedaan mean yang signifikan pada 2 kelompok data yang berskala data interval/rasio. Uji t untuk varian yang berbeda menggunakan rumus Separated Varians:
+
+\begin{equation}
+t = \frac{ \bar{X_1} - \bar{X_2} }
+{ \sqrt{ \frac{S_1^2}{n_1} + \frac{S_2^2}{n_2} } }
+\end{equation}
+
+\subsection{Shapiro-Wilk}
+Shapiro-Wilk adalah salah satu cara untuk menguji normalitas data yang bertujuan untuk mengetahui apakah data penelitian berdistribusi normal atau tidak. Uji normalitas merupakan sebuah kewajiban karena dalam statistik, paramertik distribusi data yang normal adalah suatu keharusan dan merupakan syarat yang mutlak dan harus terpenuhi. Apabila sebuah data menghasilkan nilai minimal 0.05 maka data tersebut sudah tergolong normal.\\
+
+Shapiro-Wilk dapat dihitung dengan rumus di bawah ini:
+
+\begin{equation}
+T_3 = \frac{1}{D} \Bigg[ \sum_{i=1}^{k}a_i(X_{n-i+1}-X_i) \Bigg]^2
+\end{equation}
+
+\begin{align*}
+  \text{dimana}~D &= \text{Berdasarkan rumus di bawah} \\
+  a_i &= \text{Koefisien test Shapiro-Wilk (lampiran 8)} \\
+  X_{n-i+1} &= \text{Data ke-(n - i + 1)} \\
+  X_i &= \text{Data ke-i}
+\end{align*}
+
+\begin{equation}
+D = \sum_{i=1}^{n}(X_i - \bar{X})^2
+\end{equation}
+
+\begin{align*}
+  \text{dimana}~X_i &= \text{Data ke-i} \\
+  \bar{X} &= \text{Rata-rata data}
+\end{align*}
+
+\begin{equation}
+G = b_n + c_n + \ln{\bigg( \frac{T_3 - d_n}{1 - T_3} \bigg)}
+\end{equation}
+
+\begin{align*}
+  \text{dimana}~G &= \text{Identik dengan nilai Z distribusi normal} \\
+  T_3 &= \text{Berdasarkan rumus di atas} \\
+  b_n, c_n, d_n &= \text{Konversi Statistik Shapiro-Wilk Pendekatan Distribusi Normal (lampiran 7)}
+\end{align*}
+
+\subsection{Korelasi}
+Analisis korelasi adalah metode statistik yang digunakan untuk mengukur besarnya hubungan linier antara dua variabel atau lebih. Jika nilai korelasi bernilai positif, maka hubungan antara dua variabel bersifat satu aarah. Sebaliknya, jika nilai korelasi bernilai negatif, maka hubungan antara dua variabel bersifat berlawanan arah. Apabila nilai mutlak korelasi mendekati angka satu, maka kedua variabel dapat dinyatakan memiliki hubungan yang kuat.Walaupun demikian, korelasi tidak dapat menentukan relasi sebab akibat, namun hanya dapat menentukan apakah ada hubungan kuat atau tidak antara dua buah variabel.
+
+\subsection{Analisis Varians (ANOVA)}
+Analisis varians (ANOVA) adalah suatu metode analisis statistika yang termasuk ke dalam cabang statistika inferensi. Secara umum, analisis varians menguji dua atau lebih varians (atau ragam) berdasarkan hipotesis nol bahwa kedua varians itu sama. \\
+
+Prinsip uji anova adalah melakukan analisis variabilitas data menjadi dua sumber variasi, yaitu variasi didalam kelompok (\textit{within}) dan variasi antar kelompok (\textit{between}). Bila variasi \textit{within} dan \textit{between} sama (nilai perbandingan kedua varian mendekati angka satu), maka artinya nilai mean yang dibandingkan tidak ada perbedaan (tidak ada perbedaan intervensi yang dilakukan). Sebaliknya, bila variasi antar kelompok lebih besar dari variasi didalam kelompok, artinya intervensi tersebut memberikan efek yang berbeda, dengan kata lain nilai mean yang dibandingkan menunjukkan adanya perbedaan. \\
+
+\noindent F-ratio = mean square value of between group / mean square value of within group
+\begin{equation}
+F = \frac{MSb}{MSw}
+\end{equation}
+
+\noindent MSw = sum of all values required / within group degree of freedom
+\begin{equation}
+MSw = \frac{\sum vi^2}{a(n-1)}
+\end{equation}
+
+\noindent MSb = sum of all squared mean differences / between group degree of freedom
+\begin{equation}
+MSb = \frac{\sum n(xi - x)^2}{a - 1}
+\end{equation}
+
+\subsection{Hipotesis}
+
+Suatu hipotesis masalah dapat divalidasi melalui metode-metode analisis statistika. Satu cara analisa suatu hipotesis dapat dilakukan dengan memeriksa hasil nilai p dari uji statistik yang sesuai. P-value adalah ukuran kekuatan probabilitas untuk menolak atau menerima null hypothesis. Semakin kecil nilai p, maka semakin kuat probabilitas untuk menolak null hypothesis. Apabila nilai p lebih rendah dibandingkan dengan derajat signifikansi yang digunakan pada uji statistik, maka null hypothesis dapat ditolak. Selain itu, validitas hipotesis dapat juga diuji melalui hasil tes statistik. Apabila nilai mutlak tes statistik lebih tinggi dari nilai kritis, maka null hypothesis dapat ditolak.
+
+\section{Statistika Deskriptif}
+
+\subsection{Perbandingan IPK Mahasiswa Berdasarkan Jurusan}
+
+%--Boxplot IPK - Jurusan--
+<<consbox1, echo=FALSE,warning=FALSE,message=FALSE>>=
+require(mosaic)
+tabelipk <- read.csv("sampelipk.csv")
+boxplot(IPK~Jurusan, data = tabelipk, xlab="Nilai IPK Mahasiswa", ylab="Jurusan",main="Perbandingan IPK Mahasiswa UMN Berdasarkan Jurusan", col="lightblue", horizontal=TRUE, frame.plot=TRUE, ylim= c(2,4), range = 0.95)
+@
+
+Boxplot di atas menunjukkan persebaran data dari setiap jurusan yang terdapat pada Universitas Multimedia Nusantara, yaitu Teknik Informatika, Sistem Komputer, Sistem Informasi, Manajemen, Ilmu Komunikasi, Desain Komunikasi Visual, dan Akuntansi.
+
+%--Tabel IPK - Jurusan--
+<<conssum1, echo=FALSE,warning=FALSE,message=FALSE>>=
+summary(aov(IPK ~ Jurusan, data=tabelipk))
+@
+
+Hipotesis awal bahwa tidak ada perbedaan signifikan di antara seluruh kelompok uji dapat kita terima melalui uji ANOVA satu arah (F(6, 73) = 1.954, p = 0.08), pada derajat signifikansi \alpha \textnormal{ = 0.05. Hipotesis bahwa } \mu IPK_{TI} = \mu IPK_{SI} = \mu IPK_{SK} = \mu IPK_{Manajemen} = \mu IPK_{Akuntansi} = \mu IPK_{Ilkom} = \mu IPK_{DKV} \textnormal{ hanya dapat ditolak pada derajat signifikansi } \alpha \textnormal{ = 0.10.}
+
+\subsection{Perbandingan IPK Berdasarkan Jenis Kelamin}
+
+%--Boxplot IPK - JK--
+\includegraphics[width=0.98\textwidth]{figure/boxplotipkjk}
+
+%obsolete code -> kelebaran
+%<<consbox2, echo=FALSE,warning=FALSE,message=FALSE>>=
+%boxplot(IPK~JK, data=tabelipk, xlab="Nilai IPK Mahasiswa", ylab="Gender",main="Perbandingan IPK Laki-laki dan Perempuan", col="lightblue", horizontal=TRUE, frame.plot=TRUE, ylim= c(2,4), range = 0.95)
+%@
+Boxplot di atas menunjukkan perbandingan nilai IPK menurut jenis kelamin.
+
+%--Tabel IPK - JK--
+<<conssum2, echo=FALSE,warning=FALSE,message=FALSE>>=
+t.test(IPK~JK, data=tabelipk)
+@
+
+Pada derajat signifikansi $\alpha$ = 0.05, hasil t-test menunjukkan bahwa terdapat perbedaan signifikan antara nilai IPK mahasiswa dengan jenis kelamin laki-laki dengan mahasiswa dengan jenis kelamin perempuan.
+
+\section{Hasil Uji Hipotesis}
+
+\subsection{Korelasi IPK dengan banyak waktu yang dihabiskan di kampus}
+
+%--Tabel IPK - Jam Kampus--
+<<conssum3, echo=FALSE, warning=FALSE, message=FALSE>>=
+IPK <- tabelipk$IPK
+Ngampus <- tabelipk$Ngampus
+cor.test(IPK, Ngampus)
+@
+
+Melalui tes korelasi Pearson, didapatkan nilai korelasi cor = 0.2749887. Melalui hasil tersebut, dapat diinferensi bahwa terdapat hubungan lemah satu arah antara waktu yang dihabiskan mahasiswa UMN di kampus dengan nilai IPK yang diperoleh.

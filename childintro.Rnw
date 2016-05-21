@@ -1,0 +1,16 @@
+\chapter{Pendahuluan}
+
+\section{Latar Belakang} 
+IPK atau Indeks Prestasi Kumulatif merupakan suatu tolak ukur dari hasil atau nilai-nilai yang didapat oleh mahasiswa dalam masa perkuliahan baik dalam satu semester  maupun secara kumulatif. IPK yang beragam dalam sebuah universitas merupakan insentif kuat untuk mengadakan penelitian mengenai faktor-faktor yang dapat memengaruhi IP mahasiswa.
+
+\section{Rumusan Masalah}
+\begin{enumerate}
+\item Apa saja faktor-faktor yang memengaruhi IP mahasiswa UMN?
+\item Bagaimana cara memaksimalkan IP yang diperoleh?
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+\begin{enumerate}
+\item Untuk mengetahui faktor-faktor apa saja yang memengaruhi IPK  mahasiswa UMN.
+\item Agar mahasiswa dapat memaksimalkan IPK.
+\end{enumerate}
